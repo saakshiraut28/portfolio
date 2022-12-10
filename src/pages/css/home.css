@@ -1,0 +1,12 @@
+
+.example {
+    background-color: #eee;
+    width: 200px;
+    height: 100px;
+    border: 1px dotted black;
+    overflow-y: scroll; /* Add the ability to scroll */
+  }
+
+.parallax::-webkit-scrollbar {
+    display: none;
+}
