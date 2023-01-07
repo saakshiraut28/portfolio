@@ -4,6 +4,7 @@ import Home from './pages/home';
 import Navbar from './components/navbar';
 import Projects from './pages/projects';
 import {Parallax, ParallaxLayer} from '@react-spring/parallax';
+import About from './pages/about';
 
 function App() {
   return (
@@ -12,8 +13,11 @@ function App() {
         <ParallaxLayer offset={0}>
           <Home />
         </ParallaxLayer>
-        <ParallaxLayer offset={1}>
+        {/*<ParallaxLayer offset={1}>
           <Projects />
+  </ParallaxLayer>*/}
+        <ParallaxLayer offset={1}>
+          <About />
         </ParallaxLayer>
       </Parallax>
     </div>

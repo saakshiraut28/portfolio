@@ -6,13 +6,13 @@ import { MeshDistortMaterial, GradientTexture } from '@react-three/drei';
 function Projects() {
     return ( <>
     <div className='h-screen'>
-        <div className='grid grid-cols-2 bg-black top-0 h-full'>
+        <div className='grid bg-black top-0 h-full'>
             <Canvas>
-            <ambientLight intensity={1} />
+            <ambientLight intensity={2} />
             <spotLight />
             <mesh>
                 <sphereBufferGeometry />
-                <MeshDistortMaterial attach="material" color={'#575757'} distort={0.5} speed={2}/>
+                <MeshDistortMaterial attach="material" color={'#575757'} distort={5} speed={2}/>
             </mesh>
             </Canvas>    
         </div>
