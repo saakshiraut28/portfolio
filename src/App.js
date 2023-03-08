@@ -9,16 +9,18 @@ import About from './pages/about';
 function App() {
   return (
     <div className="App">
-      <Parallax pages={2}>
+      <Parallax pages={1}>
+        {/*
         <ParallaxLayer offset={0}>
           <Home />
-        </ParallaxLayer>
-        {/*<ParallaxLayer offset={1}>
-          <Projects />
   </ParallaxLayer>*/}
+        <ParallaxLayer offset={0}>
+          <Projects />
+  </ParallaxLayer>
+    {/*
         <ParallaxLayer offset={1}>
           <About />
-        </ParallaxLayer>
+        </ParallaxLayer>*/}
       </Parallax>
     </div>
   );
