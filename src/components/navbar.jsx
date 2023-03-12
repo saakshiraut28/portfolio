@@ -4,7 +4,7 @@ import Paw from "../assets/icons/paws.png";
 
 const Navbar = () => {
     return (
-        <nav className="flex justify-between py-12 px-12 sticky top-0">
+        <nav className="flex justify-between py-12 px-12 sticky top-0 bg-white">
             <div className="h-[50px] w-[50px]">
                 <Link to='/'><img src={Paw} alt="Paws" /></Link>
             </div>
