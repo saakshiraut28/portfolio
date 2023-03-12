@@ -8,12 +8,12 @@
     right:-50%;
     top:0;
     z-index:-1;
-    transform:translate( -50%);
+    transform:translate( 100%);
   }
 
   .bg2 {
     animation-direction:alternate-reverse;
-    animation-duration:3s;
+    animation-duration:5s;
   }
 
   
@@ -22,6 +22,6 @@
       transform:translateX(-25%);
     }
     100% {
-      transform:translateX(-50%);
+      transform:translateX(-100%);
     }
   }

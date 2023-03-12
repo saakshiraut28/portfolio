@@ -1,47 +1,51 @@
-import React, { Component } from 'react';
-import rect1 from '../assets/images/Rectangle 2.png';
-import rect2 from '../assets/images/Rectangle 3.png';
-import rect3 from '../assets/images/Rectangle 4.png';
-import rect4 from '../assets/images/Rectangle 5.png';
+import React from 'react';
+import Navbar from '../components/navbar';
 
 function Projects() {
     function Card(props) {
         return <>
-            <div className='flex w-full h-full'>
-                <div className='number flex font-lora text-4xl font-black pl-32 items-center h-full'>
-                    <div className=''>
-                        1. <br />
-                        2. <br />
-                        3. <br />
-                    </div>
+            <div class="w-full rounded overflow-hidden shadow-lg border h-md">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2 font-lora">Project 1</div>
                 </div>
-                <div className='title flex items-center font-mont font-black leading-none -mx-56 text-8xl'>
-                    <div className='-rotate-90 leading-none'>
-                    <span >PORTFOLIO</span>
-                    </div>
+                <div class="px-6 pb-4">
+                    <p class="text-black text-base py-2">
+                        Tech Stack: 
+                    </p>
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#React JS</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Tailwind</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Three JS</span>
                 </div>
-                <div className='domain flex flex-col place-content-center items-end w-full text-lg space-y-1'>
-                    <span className='px-2 font-lora text-xl font-bold'>Web Development</span>
-                    <hr className="w-72 h-0.5 bg-black"></hr>
-                    <span className='px-2'><i class="fa-solid fa-code-fork px-1"></i>
-                    <i class="fa-sharp fa-solid fa-link"></i></span>
+                <div className='buttons px-6 py-8 flex space-x-4 justify-center'>
+                    <div className='relative w-32'>
+                        <div className='absolute inset-0.5 bg-gradient-to-r from-red-500 to-indigo-500 opacity-75 blur'/>
+                            <div className='relative bg-white text-black flex justify-center rounded-sm py-1'>
+                                Github
+                            </div>
+                    </div>
+                    <div className='relative w-32'>
+                        <div className='absolute inset-0.5 bg-gradient-to-r from-red-500 to-indigo-500 opacity-75 blur'/>
+                            <div className='relative bg-white text-black flex justify-center rounded-sm py-1'>
+                                Link
+                            </div>
+                    </div>
                 </div>
             </div>
         </>;
       }
 
     return ( <>
-    <div className='container flex h-full'>
-        <div className='flex w-1/2'>
-            <Card/>
-        </div>
-        <div className='images flex w-1/2 space-between-3 align-bottom items-end space-x-16'>
-            <img src={rect3} alt='img' width='150px' className='h-full' />
-            <img src={rect1} alt='img' width='100px' className='h-3/5'/>
-            <img src={rect2} alt='img' width='150px' className='h-5/6'/>
-            <img src={rect4} alt='img' width='100px' className='h-3/5'/>
-        </div>
-    </div>
+         <div className='grid lg:grid-cols-3 h-full w-full content-center justify-items-center sm:px-10 sm:py-4'>
+            <div className='px-2 py-4 w-5/6'>
+                <Card />
+            </div>
+            <div className='px-2 py-4 w-5/6'>
+                <Card /> 
+            </div>
+            <div className='px-2 py-4 w-5/6'>
+                <Card />
+            </div>
+         </div>
     </> );
 }
 

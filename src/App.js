@@ -5,25 +5,19 @@ import Navbar from './components/navbar';
 import Projects from './pages/projects';
 import {Parallax, ParallaxLayer} from '@react-spring/parallax';
 import About from './pages/about';
+import { Route, Routes } from 'react-router-dom';
+
 
 function App() {
-  return (
-    <div className="App">
-      <Parallax pages={1}>
-        {/*
-        <ParallaxLayer offset={0}>
-          <Home />
-  </ParallaxLayer>*/}
-        <ParallaxLayer offset={0}>
-          <Projects />
-  </ParallaxLayer>
-    {/*
-        <ParallaxLayer offset={1}>
-          <About />
-        </ParallaxLayer>*/}
-      </Parallax>
-    </div>
-  );
+  return (<>
+    <Navbar/>
+    <Routes>
+
+      <Route path='/' element={<Home/>}/>
+      <Route path='/about' element={<About/>}/>
+      <Route path='/project' element={<Projects/>}/>
+    </Routes>
+    </>);
 }
 
 export default App;
