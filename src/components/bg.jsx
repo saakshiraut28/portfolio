@@ -6,10 +6,10 @@ import { useLoader } from "@react-three/fiber";
 import { useMemo } from "react";
 import * as THREE from "three";
 
-function Background({ count = 1000 }) {
+function Background({ count = 10000 }) {
   const CircleImg = useLoader(THREE.TextureLoader, circleImg);
   const points = useMemo(() => {
-    const p = new Array(count).fill(0).map((v) => (0.5 - Math.random()) * 7.5);
+    const p = new Array(count).fill(0).map((v) => (0.5 - Math.random()) * 20);
     return new THREE.BufferAttribute(new Float32Array(p), 3);
   }, [count]);
 
@@ -21,7 +21,7 @@ function Background({ count = 1000 }) {
       <pointsMaterial
         map={CircleImg}
         size={0.1}
-        color={0x000000}
+        color={0x1463ff}
         sizeAttenuation={true}
         alphaTest={0.5}
       />

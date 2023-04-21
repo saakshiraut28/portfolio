@@ -11,9 +11,9 @@ function home() {
   return (
     <>
       <section className="content px-4 h-screen w-full content-center">
-        <div className="relative h-screen w-full top-0">
+        <div className="relative h-full w-full top-0">
           <Canvas style={{ width: "100%", height: "100%" }}>
-            <OrbitControls enableZoom={false} />
+            <OrbitControls enableZoom={false} rotation={true} />
             <ambientLight intensity={1} />
             <directionalLight position={[5, 10, 5]} intensity={0.5} />
             {/* big circle */}
@@ -59,10 +59,10 @@ function home() {
             <Background />
           </Canvas>
         </div>
-        <div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 translate-y-1/4 rounded-lg p-8 px-16 backdrop-blur-3xl backdrop-opacity-72 border border-gray-300 shadow-xl ">
+        <div className="">
+          <div className="absolute top-0 translate-y-full translate-x-1/2 rounded-lg p-8 px-16 backdrop-blur-3xl backdrop-opacity-72 border border-gray-300 shadow-xl ">
             <span className="font-lora text-7xl">
-              I'm <span className="">Saakshi Raut</span>.
+              <span className="">Welcome</span>.
             </span>
             <br />
             <span className="font-lora text-xl">
