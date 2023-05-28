@@ -1,12 +1,14 @@
+/** @format */
 
-.example {
-    background-color: #eee;
-    width: 200px;
-    height: 100px;
-    border: 1px dotted black;
-    overflow-y: scroll; /* Add the ability to scroll */
+@keyframes custom-slide {
+  0% {
+    transform: translateX(-100%);
   }
+  100% {
+    transform: translateX(100%);
+  }
+}
 
-.parallax::-webkit-scrollbar {
-    display: none;
+#custom-spin {
+  animation: custom-slide 15s linear infinite;
 }

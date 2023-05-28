@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { Component } from "react";
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
@@ -27,10 +29,10 @@ function About() {
       <div class="bg"></div>
       <div class="bg bg2"></div>
       <div class="foreground"></div>
-      <div className="container px-10 lg:px-20">
+      <div className="container px-10 lg:px-20 font-main">
         {/* TITLE */}
         <div className="title w-full flex lg:justify-end  ">
-          <span className="text-3xl font-semibold font-mont">ABOUT</span>
+          <span className="text-3xl font-semibold">ABOUT</span>
           <br />
         </div>
         <div className="title2 w-full flex lg:justify-end ">
@@ -39,7 +41,7 @@ function About() {
         </div>
         {/* INTRODUCTION */}
         <div className="intro flex lg:px-20 py-32 ">
-          <span className="auto-type font-lora text-xl lg:w-2/3 font-regular space-y-2">
+          <span className="auto-type text-xl lg:w-2/3 font-regular space-y-2">
             <span ref={el}></span>
             <p>
               I'm an AI | ML enthusiast and a web designer/developer

@@ -2,7 +2,7 @@
 
 import "./index.css";
 import React, { Component } from "react";
-import Home from "./pages/home";
+import Home from "./pages/homep";
 import Navbar from "./components/navbar";
 import Projects from "./pages/projects";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
@@ -12,9 +12,9 @@ import { Route, Routes } from "react-router-dom";
 function App() {
   return (
     <>
-      {/*<Navbar/>*/}
+      <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home />} exact />
         <Route path="/about" element={<About />} />
         <Route path="/project" element={<Projects />} />
       </Routes>

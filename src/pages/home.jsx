@@ -5,76 +5,66 @@ import "./css/home.css";
 import { Canvas } from "@react-three/fiber";
 import Circle from "../components/circle";
 import { OrbitControls } from "@react-three/drei";
-import Background from "../components/bg";
+import Orbit from "../assets/vectors/orbit2.svg";
+import Ufo from "../assets/vectors/Ufo.svg";
+import line from "../assets/vectors/line.svg";
+import arrow from "../assets/vectors/arrow.svg";
+import circle from "../assets/vectors/circle.svg";
 
-function home() {
+function Home() {
   return (
     <>
-      <section className="content px-4 h-screen w-full content-center">
-        <div className="relative h-full w-full top-0">
-          <Canvas style={{ width: "100%", height: "100%" }}>
-            <OrbitControls enableZoom={false} rotation={true} />
-            <ambientLight intensity={1} />
-            <directionalLight position={[5, 10, 5]} intensity={0.5} />
-            {/* big circle */}
-            <Circle
-              radius={2}
-              widseg={64}
-              heightseg={32}
-              x={0}
-              y={0}
-              z={0}
-              distort={0.1}
+      <section className="container  top-0 content h-screen w-full content-center font-main ">
+        <div className="relative sticky top-0 invisible lg:visible relative h-full w-full top-0 sticky">
+          <Canvas
+            style={{ width: "100%", height: "100%" }}
+            camera={{ fov: 25, position: [-10, 55, 20] }}
+          >
+            <OrbitControls
+              enableZoom={false}
+              autoRotate={true}
+              rotateSpeed={3}
             />
-            {/* left-top */}
-            <Circle
-              radius={0.5}
-              widseg={64}
-              heightseg={32}
-              x={2}
-              y={1.5}
-              z={0}
-              distort={0.6}
-            />
-            {/* right-bottom */}
+            {/**autoRotate={true} */}
             <Circle
               radius={1}
               widseg={64}
               heightseg={32}
-              x={-3}
-              y={-1.5}
+              x={15}
+              y={0}
               z={0}
-              distort={0.3}
+              distort={0}
             />
-            {/* right-top */}
-            <Circle
-              radius={0.9}
-              widseg={64}
-              heightseg={32}
-              x={-1.5}
-              y={2}
-              z={0}
-              distort={0.5}
-            />
-            <Background />
           </Canvas>
+          <div className="absolute top-0 invisible lg:visible left-7 ">
+            <img src={Orbit} />
+          </div>
         </div>
-        <div className="">
-          <div className="absolute top-0 translate-y-full translate-x-1/2 rounded-lg p-8 px-16 backdrop-blur-3xl backdrop-opacity-72 border border-gray-300 shadow-xl ">
-            <span className="font-lora text-7xl">
-              <span className="">Welcome</span>.
-            </span>
-            <br />
-            <span className="font-lora text-xl">
-              Full-stack Web Developer | Open-source Contributor | Designer |
-              Learner.
+        <div className="absolute inset-0 h-screen flex">
+          <div className="title m-auto text-center text-[64px] leading-normal">
+            <img
+              src={Ufo}
+              className="w-[150px] h-[230px] -mx-4 -rotate-45 animate-pulse"
+            />
+            <p>Hello Stranger.</p>
+            <p>I'm Saakshi Raut.</p>
+            <span className="flex flex-row justify-center space-x-4 text-[32px] py-2">
+              <i class="fa-brands fa-square-instagram"></i>
+              <i class="fa-brands fa-linkedin"></i>
+              <i class="fa-brands fa-square-twitter"></i>
+              <i class="fa-brands fa-square-github"></i>
             </span>
           </div>
-          <div></div>
+        </div>
+        <div className="absolute body flex w-full h-full flex-col justify-center ">
+          <span className=" px-4 lg:px-24 text-[32px]">
+            Girl who loves developing, contributing to
+            <br /> open source and tea. 👽
+          </span>
         </div>
       </section>
     </>
   );
 }
 
-export default home;
+export default Home;

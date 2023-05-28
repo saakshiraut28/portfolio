@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { Component } from "react";
-import circleImg from "../assets/vectors/circle1.png";
+import circleImg from "../assets/vectors/star.png";
 import { useLoader } from "@react-three/fiber";
 import { useMemo } from "react";
 import * as THREE from "three";
@@ -21,7 +21,7 @@ function Background({ count = 10000 }) {
       <pointsMaterial
         map={CircleImg}
         size={0.1}
-        color={0x1463ff}
+        color={"white"}
         sizeAttenuation={true}
         alphaTest={0.5}
       />

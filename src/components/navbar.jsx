@@ -5,18 +5,15 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="absolute flex justify-between py-12 px-12 sticky top-0 ">
+    <nav className="absolute flex justify-between py-4 px-4 lg:px-8 sticky top-0 w-full bg-white font-main">
       <div className="h-[50px] w-[50px]">
         <Link to="/">
-          <span className="font-black text-2xl">&lt;/&gt;</span>
+          <span className="font-semibold text-2xl">&#123;/&#125;</span>
         </Link>
       </div>
-      <div className="font-nunito space-x-6 text-[18px] font-semibold">
-        <span className="line-through hover:underline">
-          <Link to="/about">About</Link>
-        </span>
-        <span className="line-through hover:underline">
-          <Link to="/project">Projects</Link>
+      <div className=" text-[18px] font-semibold">
+        <span className="hover:underline">
+          <Link to="/about">Say hi!</Link>
         </span>
       </div>
     </nav>

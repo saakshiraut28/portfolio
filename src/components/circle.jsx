@@ -2,6 +2,7 @@
 
 import { GradientTexture, MeshDistortMaterial } from "@react-three/drei";
 import React from "react";
+import { TextureLoader } from "three/src/loaders/TextureLoader";
 
 function Circle(props) {
   return (
@@ -14,12 +15,10 @@ function Circle(props) {
         attach="geometry"
         args={[props.radius, props.widseg, props.heightseg]}
       />
-      <MeshDistortMaterial attach="material" distort={props.distort}>
-        <GradientTexture
-          stops={[0, 1]} // As many stops as you want
-          colors={["#6500E6", "#FF9292"]} // Colors need to match the number of stops
-        />
-      </MeshDistortMaterial>
+      <MeshDistortMaterial
+        attach="material"
+        distort={props.distort}
+      ></MeshDistortMaterial>
     </mesh>
   );
 }
