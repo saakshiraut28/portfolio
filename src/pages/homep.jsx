@@ -29,22 +29,10 @@ function Home() {
             </span>
           </div>
           <div className="flex md:justify-end md:items-center flex-col px-8 space-y-3">
-            <img
-              src={Linkedin}
-              className="hover:w-[35px] hover:h-[35px] hover:mr-4"
-            />
-            <img
-              src={Twitter}
-              className="hover:w-[35px] hover:h-[35px] hover:mr-4"
-            />
-            <img
-              src={Git}
-              className="hover:w-[35px] hover:h-[35px] hover:mr-4"
-            />
-            <img
-              src={Instagram}
-              className="hover:w-[35px] hover:h-[35px] hover:mr-4"
-            />
+            <img src={Linkedin} className="transition-all hover:p-3" />
+            <img src={Twitter} className="transition-all hover:p-3" />
+            <img src={Git} className="transition-all hover:p-3" />
+            <img src={Instagram} className="transition-all hover:p-3" />
           </div>
         </div>
       </section>
