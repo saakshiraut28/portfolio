@@ -8,6 +8,7 @@ import Projects from "./pages/projects";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import About from "./pages/about";
 import { Route, Routes } from "react-router-dom";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/project" element={<Projects />} />
       </Routes>
+      <Footer />
     </>
   );
 }

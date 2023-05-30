@@ -7,23 +7,6 @@ import "./css/about.css";
 import Navbar from "../components/navbar";
 
 function About() {
-  const el = useRef(null);
-
-  useEffect(() => {
-    const typed = new Typed(el.current, {
-      strings: [
-        "Hello, Saakshi here, a computer engineering student studying and working in Mumbai, India. ",
-      ], // Strings to display
-      // Speed settings, try diffrent values untill you get good results
-      startDelay: 300,
-      typeSpeed: 50,
-    });
-
-    // Destroying
-    return () => {
-      typed.destroy();
-    };
-  }, []);
   return (
     <>
       <div class="bg"></div>
@@ -40,9 +23,13 @@ function About() {
           <br />
         </div>
         {/* INTRODUCTION */}
-        <div className="intro flex lg:px-20 py-32 ">
+        <div className="intro flex lg:px-20 pt-28 ">
           <span className="auto-type text-xl lg:w-2/3 font-regular space-y-2">
-            <span ref={el}></span>
+            <span>
+              Hello, Saakshi here, a computer engineering student studying and
+              working in Mumbai, India.{" "}
+            </span>
+
             <p>
               I'm an AI | ML enthusiast and a web designer/developer
               specializing in front-end development. In my free time, I like to
@@ -51,8 +38,16 @@ function About() {
             <p>And I believe that aliens do exist 👾.</p>
           </span>
         </div>
+        <div className="flex space-x-4 my-4 lg:px-20 lg:pb-24">
+          <div className="py-1 my-4 w-64 border text-center rounded-full text-[17px] hover:bg-black hover:text-white">
+            <a href="#">Download Resume</a>
+          </div>
+          <div className="py-1 my-4 w-64 border text-center rounded-full text-[17px] hover:bg-black hover:text-white">
+            <a href="#">saakshiraut28@gmail.com</a>
+          </div>
+        </div>
         {/* LAST LINES */}
-        <div className="mt-16">
+        <div className="mt-16 hidden md:block">
           <div className="title2 w-full grid space-y-1.5 ">
             <hr className="w-full h-0.5  bg-black border-0" />
             <hr className="w-3/4 h-0.5 bg-black border-0" />
