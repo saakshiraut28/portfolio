@@ -1,14 +1,26 @@
 /** @format */
 
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import welcome from "../assets/images/Welcome.png";
+import wel from "../assets/images/wel.png";
 import Repo from "../assets/icons/Repository.png";
 import Preview from "../assets/icons/Code.png";
+import Overlay from "../assets/images/overlay.png";
+import hoverEffect from "hover-effect";
 
 function Card() {
+  useEffect(() => {
+    new hoverEffect({
+      parent: document.querySelector("#distortion"),
+      intentsity: 1,
+      image1: welcome,
+      image2: wel,
+      displacementImage: Overlay,
+    });
+  });
   return (
     <>
-      <div className="flex flex-col lg:flex-row items-center justify-center w-full h-full py-28">
+      <div className="flex flex-col lg:flex-row items-center justify-center w-full h-full py-8">
         <div className="flex flex-col px-4 w-1/4 items-center md:items-end">
           <p className="text-2xl text-center font-light">Project Title</p>
           <hr className="w-64 -mr-4 h-0.5 my-4 bg-black border-0" />
@@ -22,8 +34,8 @@ function Card() {
             #React #MERN #html&css
           </p>
         </div>
-        <div>
-          <img className="w-lg h-[450px]" src={welcome} />
+        <div className="grid">
+          <div className="dist w-[600px] h-[425px]" id="distortion"></div>
           <div className="w-full flex justify-center py-2">
             <span className="flex space-x-4">
               <img src={Repo} /> <img src={Preview} />

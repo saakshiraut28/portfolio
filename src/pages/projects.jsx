@@ -13,7 +13,7 @@ function Projects() {
           <br />
         </div>
         <div className="title2 w-full flex lg:justify-start ">
-          <hr className="w-1/2 h-0.5 my-4 bg-black border-0" />
+          <hr className="w-1/2 h-0.5 my-3 bg-black border-0" />
           <br />
         </div>
         <div className="h-full">
