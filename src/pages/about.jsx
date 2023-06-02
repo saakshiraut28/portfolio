@@ -39,12 +39,12 @@ function About() {
           </span>
         </div>
         <div className="flex space-x-4 my-4 lg:px-20 lg:pb-24">
-          <div className="py-1 my-4 w-64 border text-center rounded-full text-[17px] hover:bg-black hover:text-white">
+          <button className="py-1 my-4 w-64 border text-center rounded-full text-[17px] hover:bg-black hover:text-white">
             <a href="#">Download Resume</a>
-          </div>
-          <div className="py-1 my-4 w-64 border text-center rounded-full text-[17px] hover:bg-black hover:text-white">
+          </button>
+          <button className="py-1 my-4 w-64 border text-center rounded-full text-[17px] hover:bg-black hover:text-white before:content-['Copy to clipboard']">
             <a href="#">saakshiraut28@gmail.com</a>
-          </div>
+          </button>
         </div>
         {/* LAST LINES */}
         <div className="mt-16 hidden md:block">

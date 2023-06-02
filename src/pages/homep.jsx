@@ -28,11 +28,11 @@ function Home() {
   </div> */}
             </span>
           </div>
-          <div className="flex md:justify-end md:items-center flex-col px-8 space-y-3">
-            <img src={Linkedin} className="transition-all hover:p-3" />
-            <img src={Twitter} className="transition-all hover:p-3" />
-            <img src={Git} className="transition-all hover:p-3" />
-            <img src={Instagram} className="transition-all hover:p-3" />
+          <div className="flex md:justify-end md:items-center flex-col px-8 space-y-3 ">
+            <img src={Linkedin} className="transition-all border-1" />
+            <img src={Twitter} className="transition-all " />
+            <img src={Git} className="transition-all " />
+            <img src={Instagram} className="transition-all " />
           </div>
         </div>
       </section>
