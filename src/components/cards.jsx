@@ -21,7 +21,7 @@ function Card(props) {
   });
   return (
     <>
-      <div className="flex flex-col lg:flex-row items-center justify-center w-full h-full py-8">
+      <div className="flex flex-col lg:flex-row items-center justify-center w-full h-full py-8 m-4">
         <div className="flex flex-col px-4 w-1/4 items-center md:items-end">
           <p className="text-2xl text-center font-light">{props.title}</p>
           <hr className="w-64 -mr-4 h-0.5 my-4 bg-black border-0" />

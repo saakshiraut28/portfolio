@@ -28,6 +28,7 @@ function Projects() {
             prolink="#"
             gitlink="https://github.com/saakshiraut28/Hackathon_Project"
           />
+
           <Card
             img={Oide}
             title="Scryptn - Online IDE"
@@ -36,6 +37,7 @@ function Projects() {
             prolink="#"
             gitlink="https://github.com/saakshiraut28/Online-IDE"
           />
+
           <Card
             img={Burger}
             title="Burger Assembler"
