@@ -20,6 +20,7 @@ import {
 } from "react-scroll-motion";
 
 const ZoomInScrollOut = batch(Sticky(), Fade(-0.5, 1), MoveOut(0, -300));
+const ZoomScrollOut = batch(Sticky());
 function Projects() {
   return (
     <>
@@ -60,7 +61,7 @@ function Projects() {
               </Animator>
             </ScrollPage>
             <ScrollPage>
-              <Animator animation={ZoomInScrollOut}>
+              <Animator animation={ZoomScrollOut}>
                 <Card
                   img={Burger}
                   title="Burger Assembler"
