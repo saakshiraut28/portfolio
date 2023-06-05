@@ -10,18 +10,9 @@ import Overlay from "../assets/images/overlay.png";
 import hoverEffect from "hover-effect";
 
 function Card(props) {
-  useEffect(() => {
-    new hoverEffect({
-      parent: document.querySelector("#distortion"),
-      intentsity: 1,
-      image1: props.img,
-      image2: props.img,
-      displacementImage: Overlay,
-    });
-  });
   return (
     <>
-      <div className="flex flex-col lg:flex-row items-center justify-center w-full h-full py-8 m-4">
+      <div className="flex flex-col lg:flex-row items-center justify-center w-full h-full py-8">
         <div className="flex flex-col px-4 w-1/4 items-center md:items-end">
           <p className="text-2xl text-center font-light">{props.title}</p>
           <hr className="w-64 -mr-4 h-0.5 my-4 bg-black border-0" />
@@ -34,7 +25,9 @@ function Card(props) {
           </p>
         </div>
         <div className="grid">
-          <div className="dist w-[600px] h-[425px]" id="distortion"></div>
+          <div className="dist w-[600px] h-[425px]">
+            <img src={Cgs} />
+          </div>
           <div className="w-full flex justify-center py-2">
             <span className="flex space-x-4">
               <a href={props.gitlink}>
