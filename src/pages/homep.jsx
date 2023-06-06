@@ -11,31 +11,26 @@ import Twitter from "../assets/icons/Twitter.svg";
 function Home() {
   return (
     <>
-      <section className="container  top-0 content h-full w-full content-center font-main">
-        <div className="relative top-[100px] leading-tight w-full	">
+      <div className="container h-full w-full">
+        <div className="relative">
           <img src={Curves} />
         </div>
-        <div className="absolute top-0 w-full h-full flex flex-col md:flex-row justify-center items-center">
-          <div className="flex flex-auto w-96 justify-center md:justify-start items-center px-4 font-normal ">
-            <span className="text-xl md:px-24">
-              I’m Saakshi Raut, girl who loves <br />
-              developing, contributing to
-              <br />
-              Open-source and Tea.
-              <br />
-              {/* <div className="py-1 my-4 border text-center rounded-full text-[17px] hover:bg-black hover:text-white">
-                <a href="#">saakshiraut28@gmail.com</a>
-  </div> */}
-            </span>
+        <div className="absolute flex top-0 w-full h-full flex-col md:flex-row justify-center">
+          <div className="flex w-full h-1/4 md:w-1/2  md:h-3/4  items-center justify-center text-xl font-main">
+            I’m Saakshi Raut, girl who loves
+            <br />
+            developing, contributing to
+            <br />
+            Open-source and Tea.
           </div>
-          <div className="flex md:justify-end md:items-center flex-col px-8 space-y-3 ">
-            <img src={Linkedin} className="transition-all border-1" />
-            <img src={Twitter} className="transition-all " />
-            <img src={Git} className="transition-all " />
-            <img src={Instagram} className="transition-all " />
+          <div className="flex w-full md:w-1/2  md:h-3/4  items-center md:items-end justify-center text-xl font-main flex-row md:flex-col px-10 md:space-y-4">
+            <img src={Linkedin} className="mx-4 md:mx-0 border-1" />
+            <img src={Twitter} className="mx-4 md:mx-0 " />
+            <img src={Git} className="mx-4 md:mx-0 " />
+            <img src={Instagram} className="mx-4 md:mx-0 " />
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 }

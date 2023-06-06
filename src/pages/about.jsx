@@ -9,9 +9,6 @@ import Navbar from "../components/navbar";
 function About() {
   return (
     <>
-      <div class="bg"></div>
-      <div class="bg bg2"></div>
-      <div class="foreground"></div>
       <div className="container px-10 lg:px-20 font-main">
         {/* TITLE */}
         <div className="title w-full flex lg:justify-end  ">
@@ -38,11 +35,17 @@ function About() {
             <p>And I believe that aliens do exist 👾.</p>
           </span>
         </div>
-        <div className="flex space-x-4 my-4 lg:px-20 lg:pb-24">
-          <button className="py-1 my-4 w-64 border text-center rounded-full text-[17px] hover:bg-black hover:text-white">
+        <div className="flex flex-col md:flex-row md:space-x-4 my-4 lg:px-20 lg:pb-24">
+          <button
+            data-hover="Download"
+            className="py-1 my-4 w-64 border text-center rounded-full text-[17px] hover:bg-black hover:text-white hover:text-[0px] hover:after:content-[attr(data-hover)] hover:after:text-[17px]"
+          >
             <a href="#">Download Resume</a>
           </button>
-          <button className="py-1 my-4 w-64 border text-center rounded-full text-[17px] hover:bg-black hover:text-white before:content-['Copy to clipboard']">
+          <button
+            data-hover="Copy to clipboard"
+            className="py-1 my-4 w-64 border text-center rounded-full text-[17px] hover:bg-black hover:text-white hover:text-[0px] hover:after:content-[attr(data-hover)] hover:after:text-[17px]"
+          >
             <a href="#">saakshiraut28@gmail.com</a>
           </button>
         </div>
