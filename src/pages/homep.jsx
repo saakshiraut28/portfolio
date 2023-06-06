@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useRef, Suspense } from "react";
+import React from "react";
 import "./css/home.css";
 import Curves from "../assets/vectors/curves.svg";
 import Linkedin from "../assets/icons/LinkedIn.svg";

@@ -11,13 +11,3 @@
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Old+Standard+TT:wght@400;700&display=swap");
-
-@font-face {
-  font-family: "nunito";
-  src: url(./assets/fonts/Nunito-VariableFont_wght.ttf);
-}
-
-@font-face {
-  font-family: "lora";
-  src: url(./assets/fonts/Lora-VariableFont_wght.ttf);
-}

@@ -12,53 +12,6 @@ import hoverEffect from "hover-effect";
 function Card(props) {
   return (
     <>
-      {/*
-      <div className="invisible lg:visible flex flex-row items-center justify-center w-full h-full ">
-        <div className="flex flex-col px-4 w-full lg:w-1/4 items-center md:items-end">
-          <p className="text-2xl text-center font-light">{props.title}</p>
-          <hr className="w-64 -mr-4 h-0.5 my-4 bg-black border-0" />
-          <p className="text-lg text-center md:text-right font-light">
-            {props.desc}
-            <br />
-          </p>
-          <p className="w-fit border font-regular rounded-md px-2 py-1 bg-[#F0F0F0] mt-10 text-center md:text-right">
-            {props.tech}
-          </p>
-        </div>
-        <div className="grid">
-          <div className="dist w-[600px] h-[425px] ">
-            <img src={Cgs} />
-          </div>
-          <div className="w-full flex justify-center py-2">
-            <span className="flex space-x-4">
-              <a href={props.gitlink}>
-                <img src={Repo} />
-              </a>
-              <a href={props.prolink}>
-                <img src={Preview} />
-              </a>
-            </span>
-          </div>
-        </div>
-      </div>
-      <div className="lg:hidden flex h-full w-full">
-        <div className="">
-          <div className="title text-2xl text-center font-light">
-            {props.title}
-          </div>
-          <div className="text-lg text-center font-light">{props.desc}</div>
-          <div className="w-full flex justify-center py-2">
-            <span className="flex space-x-4">
-              <a href={props.gitlink}>
-                <img src={Repo} />
-              </a>
-              <a href={props.prolink}>
-                <img src={Preview} />
-              </a>
-            </span>
-          </div>
-        </div>
-  </div>*/}
       <div className="flex px-4 w-full items-center lg:items-end  ">
         <div className="flex lg:w-1/2 w-full flex-col items-center lg:items-end">
           {/* Project Title */}

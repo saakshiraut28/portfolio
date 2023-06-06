@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { Component } from "react";
+import React from "react";
 import Card from "../components/cards";
 import Burger from "../assets/images/Burger-Builder.png";
 import Oide from "../assets/images/Scryptn.png";
