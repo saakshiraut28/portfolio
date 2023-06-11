@@ -7,11 +7,22 @@ import Linkedin from "../assets/icons/LinkedIn.svg";
 import Instagram from "../assets/icons/Instagram.svg";
 import Git from "../assets/icons/GitHub.svg";
 import Twitter from "../assets/icons/Twitter.svg";
+import Intro from "../components/introduction.jsx";
+import {
+  Animator,
+  Fade,
+  ScrollContainer,
+  ScrollPage,
+  Sticky,
+  Zoom,
+  ZoomIn,
+  batch,
+} from "react-scroll-motion";
 
 function Home() {
   return (
     <>
-      <div className="container h-full w-full">
+      <div className="relative container h-full w-full">
         <div className="relative">
           <img src={Curves} />
         </div>

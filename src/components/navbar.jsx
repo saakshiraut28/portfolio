@@ -13,7 +13,7 @@ const Navbar = () => {
       </div>
       <div className=" text-[18px] font-medium">
         <span className="hover:underline">
-          <Link to="/about">msg.</Link>
+          <Link to="/msg">msg.</Link>
         </span>
       </div>
     </nav>
