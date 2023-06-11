@@ -5,10 +5,12 @@ import Typed from "typed.js";
 import { useEffect, useRef } from "react";
 import "./css/about.css";
 import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 
 function About() {
   return (
     <>
+      <Navbar />
       <div className="container px-10 lg:px-20 font-main">
         {/* TITLE */}
         <div className="title w-full flex lg:justify-end  ">
@@ -23,8 +25,8 @@ function About() {
         <div className="intro flex lg:px-20 pt-28 ">
           <span className="auto-type text-xl lg:w-2/3 font-regular space-y-2">
             <span>
-              Hello, Saakshi here, a computer engineering student studying and
-              working in Mumbai, India.{" "}
+              Hii there, I'm Saakshi Raut, a computer engineering student
+              studying and working in Mumbai, India.{" "}
             </span>
 
             <p>
@@ -58,6 +60,7 @@ function About() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

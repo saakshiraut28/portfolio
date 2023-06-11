@@ -8,10 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        cat: ["cat", "cursive"],
-        nunito: ["nunito"],
-        lora: ["lora"],
-        mont: ["Montserrat", "sans-serif"],
+        brush: ["Caveat Brush", "cursive"],
         main: ["Josefin Sans", "sans-serif"],
       },
     },

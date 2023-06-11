@@ -1,10 +1,13 @@
 /** @format */
 
 import React from "react";
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 
 function Msg() {
   return (
     <>
+      <Navbar />
       <div className="flex h-full w-full justify-center items-center">
         <div className="flex flex-col w-1/2 bg-black px-16 py-16">
           <input
@@ -21,6 +24,7 @@ function Msg() {
           />
         </div>
       </div>
+      <Footer />
     </>
   );
 }

@@ -17,7 +17,7 @@ function Footer() {
         </div>
         <div className="flex w-full justify-end space-x-4  ">
           <Link to="/project" className="hover:underline transition-all">
-            work.
+            projects.
           </Link>
           <Link to="/about" className="hover:underline transition-all">
             about.
