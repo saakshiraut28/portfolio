@@ -6,19 +6,25 @@ import { useEffect, useRef } from "react";
 import "./css/about.css";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
+import { motion } from "framer-motion";
 
 function About() {
   return (
-    <>
+    <motion.div
+      className="bg-indigo-500 text-white"
+      initial={{ width: 0 }}
+      animate={{ width: "100%" }}
+      exit={{ x: window.innerWidth, transition: { duration: "4s" } }}
+    >
       <Navbar />
-      <div className="container px-10 lg:px-20 font-main">
+      <div className="container px-10 lg:px-20 font-main overflow-y-hidden">
         {/* TITLE */}
         <div className="title w-full flex lg:justify-end  ">
           <span className="text-3xl font-semibold">ABOUT</span>
           <br />
         </div>
         <div className="title2 w-full flex lg:justify-end ">
-          <hr className="w-1/2 h-0.5 my-4 bg-black border-0" />
+          <hr className="w-1/2 h-0.5 my-4 bg-white border-0" />
           <br />
         </div>
         {/* INTRODUCTION */}
@@ -54,14 +60,14 @@ function About() {
         {/* LAST LINES */}
         <div className="mt-16 hidden md:block">
           <div className="title2 w-full grid space-y-1.5 ">
-            <hr className="w-full h-0.5  bg-black border-0" />
-            <hr className="w-3/4 h-0.5 bg-black border-0" />
+            <hr className="w-full h-0.5  bg-white border-0" />
+            <hr className="w-3/4 h-0.5 bg-white border-0" />
             <br />
           </div>
         </div>
       </div>
       <Footer />
-    </>
+    </motion.div>
   );
 }
 

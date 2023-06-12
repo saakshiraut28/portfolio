@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <>
-      <div className="container fixed bottom-0 flex w-full h-14 items-center px-8 font-main text-[18px] font-medium bg-white">
+      <div className="absolute flex justify-between py-3 px-4 lg:px-8 sticky bottom-0 w-full font-main text-[18px]">
         <div className="flex w-full justify-start">
           <Link
             to="https://medium.com/@saakshiraut28"
