@@ -28,13 +28,13 @@ function Home() {
             </Animator>
           </ScrollPage>
         </div>
-        <div className="snap-center">
+        <section className="snap-center" id="home">
           <ScrollPage>
             <Animator animation={batch(Fade())}>
               <Info />
             </Animator>
           </ScrollPage>
-        </div>
+        </section>
       </ScrollContainer>
     </>
   );
