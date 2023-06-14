@@ -10,7 +10,7 @@ const Navbar = () => {
         <Link to="/#home">
           <span
             data-hover=";)"
-            className="font-medium text-2xl hover:text-[0px] hover:after:content-[attr(data-hover)] hover:after:text-2xl "
+            className="font-medium text-2xl trasition-all hover:text-[0px] hover:after:content-[attr(data-hover)] hover:after:text-2xl "
           >
             :)
           </span>

@@ -13,7 +13,7 @@ function About() {
   useEffect(() => {
     const t1 = gsap.timeline();
     t1.from(".para", {
-      y: 200,
+      y: 320,
       ease: "power4.out",
       delay: 1,
       duration: 1.8,
@@ -24,7 +24,7 @@ function About() {
   });
   return (
     <motion.div
-      className="bg-indigo-500 text-white"
+      className="bg-red-500 text-white"
       initial={{ width: 0 }}
       animate={{ width: "100%" }}
       exit={{ x: window.innerWidth, transition: { duration: 3 } }}
@@ -42,19 +42,21 @@ function About() {
         </div>
         {/* INTRODUCTION */}
         <div className="flex lg:px-20 pt-28 ">
-          <span className="intro auto-type text-xl lg:w-2/3 font-regular space-y-2">
-            <p className="para">
+          <span className="intro auto-type text-xl lg:w-2/3 font-regular space-y-2 overflow-hidden">
+            <p className="para overflow-hidden">
               Hii there, I'm Saakshi Raut, a computer engineering student
               studying and working in Mumbai, India.{" "}
             </p>
 
-            <p className="para">
+            <p className="para overflow-hidden">
               I'm an AI | ML enthusiast and a web designer/developer
               specializing in front-end development. In my free time, I like to
               contribute to open-source projects.
             </p>
-            <p className="para">And I believe that aliens do exist 👾.</p>
-            <p className="para flex flex-col md:flex-row md:space-x-4 my-4 lg:px-20 lg:pb-24">
+            <p className="para overflow-hidden">
+              And I believe that aliens do exist 👾.
+            </p>
+            <p className="para overflow-hidden flex flex-col md:flex-row md:space-x-4 my-4 lg:px-20 lg:pb-24">
               <button
                 data-hover="Download"
                 className="py-1 my-4 w-64 border text-center rounded-full text-[17px] hover:bg-black hover:text-white hover:text-[0px] hover:after:content-[attr(data-hover)] hover:after:text-[17px]"
