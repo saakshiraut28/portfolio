@@ -30,12 +30,12 @@ function Msg() {
         <Navbar />
 
         <div className="flex flex-col md:flex-row w-full justify-center items-center">
-          <div className="para flex w-3/4 justify-start ">
+          <div className="para flex md:w-3/4 w-full px-4  py-8 justify-start ">
             <span className="relative  font-main text-6xl md:text-[150px] text-[#e6f3ff] font-black leading-none">
               wanna
               <br /> work <br /> with me? <br />
             </span>
-            <span className="absolute text-[24px] md:text-[32px] font-main w-screen md:w-1/2 text-justify md:text-center md:py-32 md:leading-loose">
+            <span className="absolute text-[24px] md:text-[32px] font-main  md:w-1/2 text-justify md:text-center md:py-32 md:leading-loose">
               Having a great idea to discuss?
               <br />
               Just drop me a message at following email:
@@ -46,7 +46,7 @@ function Msg() {
               </span>
             </span>
           </div>
-          <div className="para text-[32px] font-main md:-ml-32 leading-loose text-right">
+          <div className="para text-[32px] font-main md:-ml-32 leading-loose md:text-right text-center">
             Follow me on:
             <br />
             <a
