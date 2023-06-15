@@ -1,68 +1,85 @@
 /** @format */
 
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import { motion } from "framer-motion";
-import { Canvas } from "@react-three/fiber";
-import {
-  GradientTexture,
-  MeshDistortMaterial,
-  OrbitControls,
-} from "@react-three/drei";
-import { MeshBasicMaterial, MeshStandardMaterial } from "three";
+
+import { gsap } from "gsap";
 function Msg() {
+  /* useEffect(() => {
+    const t1 = gsap.timeline();
+    t1.from(".para", {
+      y: 320,
+      ease: "power4.out",
+      delay: 1,
+      duration: 1.8,
+      stagger: {
+        amount: 0.8,
+      },
+    });
+  });*/
   return (
     <motion.div
-      className="overflow-hidden "
+      className="overflow-hidden text-black"
       initial={{ width: 0 }}
       animate={{ width: "100%" }}
       exit={{ x: window.innerWidth, transition: { duration: 3 } }}
     >
-      <div className="h-screen w-full relative">
-        <Canvas camera={{ fov: 45, position: [-2, 2, 2] }}>
-          <Suspense>
-            <OrbitControls enableZoom={false} enableRotate={true} />
-            <ambientLight intensity={1} />
-            <mesh position={[-3, -0.5, 0]}>
-              <sphereBufferGeometry args={[2, 32, 32]} geometry="geometry" />
-              <MeshDistortMaterial distort={0.2}>
-                <GradientTexture
-                  stops={[0, 1]} // As many stops as you want
-                  colors={["#FF9B9B", "#EB8EF4"]} // Colors need to match the number of stops
-                  size={1024} // Size is optional, default = 1024
-                />
-              </MeshDistortMaterial>
-            </mesh>
-            <mesh position={[3, 0.5, 0]}>
-              <sphereBufferGeometry args={[2.6, 32, 32]} geometry="geometry" />
-              <MeshDistortMaterial distort={0.3}>
-                <GradientTexture
-                  stops={[0, 1]} // As many stops as you want
-                  colors={["#FF9B9B", "#EB8EF4"]} // Colors need to match the number of stops
-                  size={1024} // Size is optional, default = 1024
-                />
-              </MeshDistortMaterial>
-            </mesh>
-          </Suspense>
-        </Canvas>
-      </div>
-      <div className="absolute top-0 h-screen w-full">
+      <div className="h-screen w-full">
         <Navbar />
-        <div className="flex  w-full justify-center items-center">
-          <div className="flex flex-col w-1/2 bg-black px-16 py-16 bg-gray-200 rounded-sm bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100">
-            <input
-              className="appearance-none block w-full bg-white-200 text-gray-700 border border-black-200  p-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 my-4"
-              id="grid-last-name"
-              type="text"
-              placeholder="doe@xyz.abc"
-            />
-            <textarea
-              className="appearance-none block w-full min-h-[300px] bg-white-200 text-gray-700 border border-black-200  p-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 my-4"
-              id="grid-last-name"
-              type="text"
-              placeholder="Hello! Enter your text here."
-            />
+
+        <div className="flex flex-col md:flex-row w-full justify-center items-center">
+          <div className="para flex w-3/4 justify-start ">
+            <span className="relative  font-main text-6xl md:text-[150px] text-[#e6f3ff] font-black leading-none">
+              wanna
+              <br /> work <br /> with me? <br />
+            </span>
+            <span className="absolute text-[24px] md:text-[32px] font-main w-screen md:w-1/2 text-justify md:text-center md:py-32 md:leading-loose">
+              Having a great idea to discuss?
+              <br />
+              Just drop me a message at following email:
+              <br />
+              <span className="border-b-4 border-black hover:border-b-0 transition-all">
+                {" "}
+                saakshiraut28@gmail.com
+              </span>
+            </span>
+          </div>
+          <div className="para text-[32px] font-main md:-ml-32 leading-loose text-right">
+            Follow me on:
+            <br />
+            <a
+              className="hover:border-b-4 hover:border-black transition-all"
+              href="https://github.com/saakshiraut28/"
+            >
+              {" "}
+              Github
+            </a>
+            <br />{" "}
+            <a
+              className="hover:border-b-4 hover:border-black transition-all"
+              href="https://www.linkedin.com/in/rautsaakshi/"
+            >
+              {" "}
+              LinkedIn
+            </a>
+            <br />{" "}
+            <a
+              className="hover:border-b-4 hover:border-black transition-all"
+              href="https://twitter.com/saakshitwt"
+            >
+              {" "}
+              Twitter{" "}
+            </a>
+            <br />
+            <a
+              className="hover:border-b-4 hover:border-black transition-all"
+              href="https://medium.com/@saakshiraut28"
+            >
+              {" "}
+              Medium{" "}
+            </a>
           </div>
         </div>
       </div>

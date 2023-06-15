@@ -17,7 +17,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div className=" text-[18px] font-medium">
-        <span className="hover:underline">
+        <span className="hover:underline transition-all">
           <Link to="/msg">msg.</Link>
         </span>
       </div>
