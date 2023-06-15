@@ -23,7 +23,7 @@ function Intro() {
               <MeshDistortMaterial distort={1}>
                 <GradientTexture
                   stops={[0, 1]} // As many stops as you want
-                  colors={["#FF9B9B", "#EB8EF4"]} // Colors need to match the number of stops
+                  colors={["#458CF8", "#EB8EF4"]} // Colors need to match the number of stops
                   size={1024} // Size is optional, default = 1024
                 />
               </MeshDistortMaterial>
