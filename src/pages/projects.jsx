@@ -16,12 +16,16 @@ import {
 } from "react-scroll-motion";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-
+import { motion } from "framer-motion";
 const ZoomInScrollOut = batch(Sticky(), Fade(-0.5, 1), MoveOut(0, -300));
 const ZoomScrollOut = batch(Sticky());
 function Projects() {
   return (
-    <>
+    <motion.div
+      initial={{ width: 0 }}
+      animate={{ width: "100%" }}
+      exit={{ x: window.innerWidth, transition: { duration: 3 } }}
+    >
       <Navbar />
       <div className="container px-10 lg:px-20 font-main w-full h-full scroll-smooth">
         {/* TITLE */}
@@ -75,7 +79,7 @@ function Projects() {
         </div>
       </div>
       <Footer />
-    </>
+    </motion.div>
   );
 }
 

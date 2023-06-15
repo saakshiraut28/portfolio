@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 import { gsap } from "gsap";
 function Msg() {
-  /* useEffect(() => {
+  useEffect(() => {
     const t1 = gsap.timeline();
     t1.from(".para", {
       y: 320,
@@ -18,7 +18,7 @@ function Msg() {
         amount: 0.8,
       },
     });
-  });*/
+  });
   return (
     <motion.div
       className="overflow-hidden text-black"
@@ -36,9 +36,9 @@ function Msg() {
               <br /> work <br /> with me? <br />
             </span>
             <span className="absolute text-[24px] md:text-[32px] font-main  md:w-1/2 text-justify md:text-center md:py-32 md:leading-loose px-4">
-              Having a great idea to discuss?
+              Have a great idea to discuss?
               <br />
-              Just drop me a message at following email:
+              Feel free to reach out to me by sending a message. 🖋️
               <br />
               <span className="border-b-4 border-black hover:border-b-0 transition-all">
                 {" "}

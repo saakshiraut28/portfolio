@@ -9,6 +9,16 @@ import Footer from "../components/footer";
 import { motion } from "framer-motion";
 import { TweenMax, Power3, gsap } from "gsap";
 
+let text = "saakshiraut28@gmail.com";
+const copyContent = async () => {
+  try {
+    await navigator.clipboard.writeText(text);
+    console.log("Content copied to clipboard");
+  } catch (err) {
+    console.error("Failed to copy: ", err);
+  }
+};
+
 function About() {
   useEffect(() => {
     const t1 = gsap.timeline();
@@ -22,6 +32,7 @@ function About() {
       },
     });
   });
+
   return (
     <motion.div
       className="text-black"
@@ -29,7 +40,9 @@ function About() {
       animate={{ width: "100%" }}
       exit={{ x: window.innerWidth, transition: { duration: 3 } }}
     >
-      <Navbar />
+      <div className="bg-white">
+        <Navbar />
+      </div>
       <div className="container px-10 lg:px-20 font-main overflow-y-hidden">
         {/* TITLE */}
         <div className="title w-full flex lg:justify-end  ">
@@ -41,40 +54,42 @@ function About() {
           <br />
         </div>
         {/* INTRODUCTION */}
-        <div className="flex lg:px-20 pt-28 ">
-          <span className="intro auto-type text-xl lg:w-2/3 font-regular space-y-2 overflow-hidden">
-            <p className="para overflow-hidden">
-              Hii there, I'm Saakshi Raut, a computer engineering student
-              studying and working in Mumbai, India.{" "}
+        <div className="flex lg:px-20 pt-14 ">
+          <span className="intro auto-type text-xl md:text-2xl lg:w-2/3 font-regular space-y-2 overflow-hidden leading-relaxed">
+            <p className="para overflow-hidden pb-3">
+              Hello, World! I am Saakshi currently pursuing Computer Engineering
+              at Usha Mittal Institute of Technology, situated in Mumbai, India.{" "}
             </p>
 
-            <p className="para overflow-hidden">
-              I'm an AI | ML enthusiast and a web designer/developer
-              specializing in front-end development. In my free time, I like to
-              contribute to open-source projects.
+            <p className="para overflow-hidden pb-3">
+              I design and create web applications, contribute to open-source
+              projects, and write about tech.
             </p>
             <p className="para overflow-hidden">
-              And I believe that aliens do exist 👾.
+              PS: I believe that aliens do exist 👽.
             </p>
             <p className="para overflow-hidden flex flex-col md:flex-row md:space-x-4 my-4 lg:px-20 lg:pb-24">
               <button
                 data-hover="Download"
-                className="py-1 my-4 w-64 border text-center rounded-full text-[17px] hover:bg-black hover:text-white hover:text-[0px] hover:after:content-[attr(data-hover)] hover:after:text-[17px]"
+                className="py-1 my-4 w-64 border text-center rounded-full md:text-[20px] text-[17px] hover:bg-black hover:text-white hover:text-[0px] hover:after:content-[attr(data-hover)] md:hover:after:text-[20px] hover:after:text-[17px]"
               >
-                <a href="#">Download Resume</a>
+                <a href="#">Resume</a>
               </button>
               <button
                 data-hover="Copy to clipboard"
-                className="py-1 my-4 w-64 border text-center rounded-full text-[17px] hover:bg-black hover:text-white hover:text-[0px] hover:after:content-[attr(data-hover)] hover:after:text-[17px]"
+                className="py-1 my-4 w-64 border text-center rounded-full text-[20px] md:text-[17px] hover:bg-black hover:text-white hover:text-[0px] hover:after:content-[attr(data-hover)] md:hover:after:text-[20px] hover:after:text-[17px]"
+                onClick={copyContent}
               >
-                <a href="#">saakshiraut28@gmail.com</a>
+                <a href="#" id="myText">
+                  saakshiraut28@gmail.com
+                </a>
               </button>
             </p>
           </span>
         </div>
 
         {/* LAST LINES */}
-        <div className="mt-16 hidden md:block">
+        <div className="mt-9 hidden md:block">
           <div className="title2 w-full grid space-y-1.5 ">
             <hr className="w-full h-0.5  bg-black border-0" />
             <hr className="w-3/4 h-0.5 bg-black border-0" />

@@ -13,7 +13,7 @@ import { TextureLoader } from "three";
 function Intro() {
   return (
     <>
-      <div className="container h-screen w-full bg-[#ececec]">
+      <div className="container h-screen w-screen bg-[#ececec]">
         <Canvas camera={{ fov: 55, position: [1, 1, 1] }}>
           <Suspense>
             <OrbitControls enableZoom={false} />
@@ -31,9 +31,9 @@ function Intro() {
           </Suspense>
         </Canvas>
       </div>
-      <div className="absolute top-0 w-full h-full flex justify-center items-center">
+      <div className="absolute top-0 w-full h-full flex justify-center items-center ">
         <div className="text-center">
-          <p className="font-brush text-[122px] md:text-[172px]">
+          <p className="font-brush text-[72px] md:text-[172px]">
             Hello Stranger!
           </p>
           <br />
