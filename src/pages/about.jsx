@@ -24,7 +24,7 @@ function About() {
   });
   return (
     <motion.div
-      className="bg-red-500 text-white"
+      className="text-black"
       initial={{ width: 0 }}
       animate={{ width: "100%" }}
       exit={{ x: window.innerWidth, transition: { duration: 3 } }}
@@ -37,7 +37,7 @@ function About() {
           <br />
         </div>
         <div className="title2 w-full flex lg:justify-end ">
-          <hr className="w-1/2 h-0.5 my-4 bg-white border-0" />
+          <hr className="w-1/2 h-0.5 my-4 bg-black border-0" />
           <br />
         </div>
         {/* INTRODUCTION */}
@@ -76,8 +76,8 @@ function About() {
         {/* LAST LINES */}
         <div className="mt-16 hidden md:block">
           <div className="title2 w-full grid space-y-1.5 ">
-            <hr className="w-full h-0.5  bg-white border-0" />
-            <hr className="w-3/4 h-0.5 bg-white border-0" />
+            <hr className="w-full h-0.5  bg-black border-0" />
+            <hr className="w-3/4 h-0.5 bg-black border-0" />
             <br />
           </div>
         </div>

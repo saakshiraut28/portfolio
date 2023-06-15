@@ -14,7 +14,7 @@ import { MeshBasicMaterial, MeshStandardMaterial } from "three";
 function Msg() {
   return (
     <motion.div
-      className="overflow-hidden"
+      className="overflow-hidden "
       initial={{ width: 0 }}
       animate={{ width: "100%" }}
       exit={{ x: window.innerWidth, transition: { duration: 3 } }}
@@ -26,23 +26,23 @@ function Msg() {
             <ambientLight intensity={1} />
             <mesh position={[-3, -0.5, 0]}>
               <sphereBufferGeometry args={[2, 32, 32]} geometry="geometry" />
-              <meshBasicMaterial>
+              <MeshDistortMaterial distort={0.2}>
                 <GradientTexture
                   stops={[0, 1]} // As many stops as you want
                   colors={["#FF9B9B", "#EB8EF4"]} // Colors need to match the number of stops
                   size={1024} // Size is optional, default = 1024
                 />
-              </meshBasicMaterial>
+              </MeshDistortMaterial>
             </mesh>
             <mesh position={[3, 0.5, 0]}>
-              <sphereBufferGeometry args={[2, 32, 32]} geometry="geometry" />
-              <meshBasicMaterial>
+              <sphereBufferGeometry args={[2.6, 32, 32]} geometry="geometry" />
+              <MeshDistortMaterial distort={0.3}>
                 <GradientTexture
                   stops={[0, 1]} // As many stops as you want
                   colors={["#FF9B9B", "#EB8EF4"]} // Colors need to match the number of stops
                   size={1024} // Size is optional, default = 1024
                 />
-              </meshBasicMaterial>
+              </MeshDistortMaterial>
             </mesh>
           </Suspense>
         </Canvas>

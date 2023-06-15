@@ -33,7 +33,9 @@ function Intro() {
       </div>
       <div className="absolute top-0 w-full h-full flex justify-center items-center">
         <div className="text-center">
-          <p className="font-brush text-[122px] md:text-[172px]">Hello!</p>
+          <p className="font-brush text-[122px] md:text-[172px]">
+            Hello Stranger!
+          </p>
           <br />
           <p className="font-main text-xl tracking-widest">
             DEVELOPED BY SAAKSHI RAUT 🚀.
