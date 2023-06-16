@@ -1,8 +1,7 @@
 /** @format */
 
 import React, { Component } from "react";
-import Typed from "typed.js";
-import { useEffect, useRef } from "react";
+import Resume from "../assets/sr_resume.pdf";
 import "./css/about.css";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
@@ -26,7 +25,7 @@ const copyContent = async () => {
 };
 
 function About() {
-  useEffect(() => {
+  /*useEffect(() => {
     const t1 = gsap.timeline();
     t1.from(".para", {
       y: 320,
@@ -37,7 +36,7 @@ function About() {
         amount: 0.8,
       },
     });
-  });
+  });*/
 
   return (
     <motion.div
@@ -103,12 +102,14 @@ function About() {
                 PS: I believe that aliens do exist 👽.
               </p>
               <p className="para overflow-hidden flex flex-col md:flex-row md:space-x-4 my-4 lg:px-20 lg:pb-24">
-                <button
-                  data-hover="Download"
-                  className="py-1 my-4 w-64 border text-center rounded-full md:text-[20px] text-[17px] hover:bg-black hover:text-white hover:text-[0px] hover:after:content-[attr(data-hover)] md:hover:after:text-[20px] hover:after:text-[17px]"
-                >
-                  <a href="#">Resume</a>
-                </button>
+                <a href={Resume} target="_blank">
+                  <button
+                    data-hover="Download"
+                    className="py-1 my-4 w-64 border text-center rounded-full md:text-[20px] text-[17px] hover:bg-black hover:text-white hover:text-[0px] hover:after:content-[attr(data-hover)] md:hover:after:text-[20px] hover:after:text-[17px]"
+                  >
+                    Resume
+                  </button>
+                </a>
                 <button
                   data-hover="Copy to clipboard"
                   className="py-1 my-4 w-64 border text-center rounded-full text-[20px] md:text-[17px] hover:bg-black hover:text-white hover:text-[0px] hover:after:content-[attr(data-hover)] md:hover:after:text-[20px] hover:after:text-[17px]"

@@ -37,7 +37,7 @@ function Info() {
         </div>
         <div className="para absolute flex top-0 w-full h-screen flex-col md:flex-row justify-center items-center">
           <div className="flex w-full md:h-3/4  items-center justify-center text-xl font-main -mt-24 text-center py-8">
-            I’m Saakshi, girl who loves
+            I’m Saakshi, a girl who loves
             <br />
             developing, contributing to
             <br />

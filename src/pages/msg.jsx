@@ -62,7 +62,7 @@ function Msg() {
               href="https://www.linkedin.com/in/rautsaakshi/"
             >
               {" "}
-              LinkedIn
+              Linkedin
             </a>
             <br />{" "}
             <a
