@@ -25,7 +25,7 @@ const copyContent = async () => {
 };
 
 function About() {
-  /*useEffect(() => {
+  useEffect(() => {
     const t1 = gsap.timeline();
     t1.from(".para", {
       y: 320,
@@ -36,7 +36,7 @@ function About() {
         amount: 0.8,
       },
     });
-  });*/
+  });
 
   return (
     <motion.div
