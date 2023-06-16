@@ -13,6 +13,7 @@ import {
   MeshDistortMaterial,
   OrbitControls,
 } from "@react-three/drei";
+import { useEffect } from "react";
 
 let text = "saakshiraut28@gmail.com";
 const copyContent = async () => {
