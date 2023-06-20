@@ -34,9 +34,6 @@ function Card(props) {
             <a href={props.gitlink}>
               <img src={Repo} />
             </a>
-            <a href={props.prolink}>
-              <img src={Preview} />
-            </a>
           </span>
         </div>
         <div className="hidden lg:flex w-[750px] h-[450px] ">
