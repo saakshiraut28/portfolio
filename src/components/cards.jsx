@@ -12,7 +12,7 @@ import hoverEffect from "hover-effect";
 function Card(props) {
   return (
     <>
-      <div className="flex px-4 w-full items-center lg:items-end  ">
+      <div className="flex px-4  pt-8 md:pt-14 w-full items-center lg:items-end  ">
         <div className="flex lg:w-1/2 w-full flex-col items-center lg:items-end">
           {/* Project Title */}
           <p className="text-2xl text-center lg:text-right font-light px-3">
