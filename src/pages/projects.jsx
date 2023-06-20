@@ -37,7 +37,7 @@ function Projects() {
           <hr className="w-1/2 h-0.5 my-4 bg-black border-0" />
           <br />
         </div>
-        <div className="intro flex-row lg:px-20 pt-8 md:pt-14 w-full ">
+        <div className="intro flex-row lg:px-20 pt-8 md:pt-18 w-full ">
           <ScrollContainer>
             <ScrollPage>
               <Animator animation={ZoomInScrollOut}>
