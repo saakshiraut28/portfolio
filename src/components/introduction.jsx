@@ -4,7 +4,6 @@ import {
   GradientTexture,
   MeshDistortMaterial,
   OrbitControls,
-  useTexture,
 } from "@react-three/drei";
 import { Canvas, useLoader, useThree } from "@react-three/fiber";
 import React, { Suspense } from "react";

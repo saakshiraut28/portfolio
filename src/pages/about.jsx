@@ -6,7 +6,7 @@ import "./css/about.css";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import { motion } from "framer-motion";
-import { TweenMax, Power3, gsap } from "gsap";
+import { gsap } from "gsap";
 import { Canvas } from "@react-three/fiber";
 import {
   GradientTexture,
@@ -78,11 +78,11 @@ function About() {
         </div>
         <div className="container px-10 lg:px-20 font-main overflow-y-hidden">
           {/* TITLE */}
-          <div className="title w-full flex lg:justify-end  ">
+          <div className="para title w-full flex lg:justify-end  ">
             <span className="text-3xl font-semibold">ABOUT</span>
             <br />
           </div>
-          <div className="title2 w-full flex lg:justify-end ">
+          <div className="para title2 w-full flex lg:justify-end ">
             <hr className="w-1/2 h-0.5 my-4 bg-black border-0" />
             <br />
           </div>
@@ -133,7 +133,9 @@ function About() {
             </div>
           </div>
         </div>
-        <Footer />
+        <div className="bg-white">
+          <Footer />
+        </div>
       </div>
     </motion.div>
   );
