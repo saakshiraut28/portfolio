@@ -17,7 +17,7 @@ import {
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import { motion } from "framer-motion";
-const ZoomInScrollOut = batch(Sticky(), Fade(-0.5, 1), MoveOut(0, -300));
+const ZoomInScrollOut = batch(Sticky(), Fade(-0.5, 1.5), MoveOut(0, -100));
 const ZoomScrollOut = batch(Sticky());
 function Projects() {
   return (
