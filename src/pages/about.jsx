@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { Component } from "react";
-import Resume from "../assets/sr_resume.pdf";
+import Resume from "../assets/Saakshi_Raut_Resume.pdf";
 import "./css/about.css";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
