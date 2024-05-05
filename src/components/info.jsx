@@ -3,15 +3,27 @@
 import React, { useEffect } from "react";
 import Linkedin from "../assets/icons/LinkedIn.svg";
 import Git from "../assets/icons/GitHub.svg";
-import Twitter from "../assets/icons/Twitter.svg";
-import Instagram from "../assets/icons/Instagram.svg";
-import Curves from "../assets/vectors/curves.svg";
-import Navbar from "./navbar";
-import Footer from "./footer";
+import Twitter from "../assets/icons/TwitterX.svg";
+
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
+import {
+  Animator,
+  Fade,
+  FadeIn,
+  FadeOut,
+  ScrollContainer,
+  ScrollPage,
+  Sticky,
+  Zoom,
+  ZoomIn,
+  ZoomOut,
+  batch,
+} from "react-scroll-motion";
+import Navbar from "./navbar";
+
 function Info() {
-  /* useEffect(() => {
+  useEffect(() => {
     const t1 = gsap.timeline();
     t1.from(".para", {
       y: 320,
@@ -22,7 +34,8 @@ function Info() {
         amount: 0.8,
       },
     });
-  });*/
+  });
+
   return (
     <motion.div
       className="scroll-smooth snap snap-mandatory snap-y"
@@ -30,42 +43,67 @@ function Info() {
       animate={{ width: "100%" }}
       exit={{ transition: { duration: "1s" } }}
     >
-      <Navbar />
-      <div className="relative container h-screen w-full">
-        <div className="relative">
-          <img src={Curves} />
-        </div>
-        <div className="para absolute flex top-0 w-full h-screen flex-col md:flex-row justify-center items-center">
-          <div className="flex w-full md:h-3/4  items-center justify-center text-xl font-main -mt-24 text-center py-8">
-            I’m Saakshi, a girl who loves
-            <br />
-            developing, contributing to
-            <br />
-            Open-source and Tea.
+      <ScrollContainer>
+        <div className="w-full h-full absolute z-2 overflow-y-none">
+          <ScrollPage>
+            <div className="flex h-screen w-full justify-center items-center">
+              <Animator animation={batch(Fade(-1, 1), ZoomOut)}>
+                <div className="text-center text-black">
+                  <p className="font-brush text-[72px] md:text-[172px]">
+                    Hello Human!
+                  </p>
+                  <br />
+                  <p className="text-black font-main text-xl tracking-widest">
+                    DEVELOPED BY SAAKSHI RAUT 🚀.
+                  </p>
+                </div>
+              </Animator>
+            </div>
+          </ScrollPage>
+
+          <div className="flex justify-center items-center lg:max-w-xl mx-auto bg-tranparent h-screen">
+            <div className="border border-slate-200	 bg-grey-700 bg-opacity-30 backdrop-filter backdrop-blur-lg  px-4 md:px-6 lg:px-16 py-4 md:py-6 lg:py- 8 rounded-lg shadow-lg">
+              <p className="text-black font-main text-xl font-medium">
+                <p className="py-2">Hi, I'm Saakshi.👽</p>
+                <p className="py-2">
+                  A web developer who can design and develop amazing websites
+                  for you, like the one you are currently viewing ;)
+                </p>
+                <p className="py-2">
+                  I love building cool stuff, and currently, I'm working on some
+                  Web3 projects.
+                </p>
+              </p>
+              <div className="w-full flex flex-row items-center justify-center space-x-4 py-4">
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/rautsaakshi/"
+                >
+                  <img
+                    src={Linkedin}
+                    className="mx-4 md:mx-0 hover:border-blue-400 p-[0.5px]"
+                  />
+                </a>
+                <a target="_blank" href="https://twitter.com/saakshitwt">
+                  <img
+                    src={Twitter}
+                    className="mx-4 md:mx-0 hover:border-blue-400 p-[0.5px]"
+                  />
+                </a>
+                <a target="_blank" href="https://github.com/saakshiraut28/">
+                  <img
+                    src={Git}
+                    className="mx-4 md:mx-0 hover:border-black p-[0.5px]"
+                  />
+                </a>
+              </div>
+              <p className="w-full text-center font-medium font-main">
+                Btw, you can drag and rotate the background 😁
+              </p>
+            </div>
           </div>
-          <div className="flex w-full md:h-3/4  items-center md:items-end justify-center text-xl font-main flex-row md:flex-col px-10 md:space-y-4 lg:-mt-28">
-            <a target="_blank" href="https://www.linkedin.com/in/rautsaakshi/">
-              <img
-                src={Linkedin}
-                className="mx-4 md:mx-0 border-2 hover:border-blue-400 p-[0.5px]"
-              />
-            </a>
-            <a target="_blank" href="https://twitter.com/saakshitwt">
-              <img
-                src={Twitter}
-                className="mx-4 md:mx-0 border-2 hover:border-blue-400 p-[0.5px]"
-              />
-            </a>
-            <a target="_blank" href="https://github.com/saakshiraut28/">
-              <img
-                src={Git}
-                className="mx-4 md:mx-0 border-2 hover:border-black p-[0.5px]"
-              />
-            </a>
-          </div>
         </div>
-      </div>
-      <Footer />
+      </ScrollContainer>
     </motion.div>
   );
 }

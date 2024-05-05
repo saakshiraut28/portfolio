@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="absolute flex justify-between py-4 px-4 lg:px-8 sticky top-0 w-full font-main">
-      <div className="h-[50px] w-[50px]">
+    <nav className="fixed w-full z-10 top-0 flex justify-between px-4 py-4 lg:px-8 font-main border border-slate-200 bg-grey-700 bg-opacity-30 backdrop-filter backdrop-blur-lg shadow-lg">
+      <div className="">
         <Link to="/#home">
           <span
             data-hover=";)"

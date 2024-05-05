@@ -55,7 +55,7 @@ function About() {
             <MeshDistortMaterial speed={2.5} distort={0.5}>
               <GradientTexture
                 stops={[0, 1]} // As many stops as you want
-                colors={["#458CF8", "#75D7F6"]} // Colors need to match the number of stops
+                colors={["#458CF8", "#EB8EF4"]} // Colors need to match the number of stops
                 size={1024} // Size is optional, default = 1024
               />
             </MeshDistortMaterial>
@@ -65,7 +65,7 @@ function About() {
             <MeshDistortMaterial speed={3} distort={0.5}>
               <GradientTexture
                 stops={[0, 1]} // As many stops as you want
-                colors={["#458CF8", "#75D7F6"]} // Colors need to match the number of stops
+                colors={["#458CF8", "#EB8EF4"]} // Colors need to match the number of stops
                 size={1024} // Size is optional, default = 1024
               />
             </MeshDistortMaterial>
