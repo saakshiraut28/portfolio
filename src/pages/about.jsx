@@ -1,7 +1,7 @@
 /** @format */
 
-import React, { Component } from "react";
-import Resume from "../assets/Saakshi_Raut_Resume.pdf";
+import React, { useState, useEffect } from "react";
+import Resume from "../assets/Saakshi_Resume_wo_Number.pdf";
 import "./css/about.css";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
@@ -13,19 +13,19 @@ import {
   MeshDistortMaterial,
   OrbitControls,
 } from "@react-three/drei";
-import { useEffect } from "react";
 
 let text = "saakshiraut28@gmail.com";
-const copyContent = async () => {
-  try {
-    await navigator.clipboard.writeText(text);
-    console.log("Content copied to clipboard");
-  } catch (err) {
-    console.error("Failed to copy: ", err);
-  }
-};
 
 function About() {
+  const [isCopy, setIsCopy] = useState(false);
+  const copyContent = async () => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setIsCopy(true);
+    } catch (err) {
+      console.error("Failed to copy: ", err);
+    }
+  };
   useEffect(() => {
     const t1 = gsap.timeline();
     t1.from(".para", {
@@ -50,9 +50,9 @@ function About() {
         <Canvas camera={{ fov: 15, position: [-2, 10, 10] }}>
           <OrbitControls enableZoom={false} />
           <ambientLight />
-          <mesh position={[3, -1, 0]}>
+          <mesh position={[1, 1, 1]}>
             <sphereBufferGeometry args={[0.8, 64, 64]} />
-            <MeshDistortMaterial speed={2.5} distort={0.5}>
+            <MeshDistortMaterial speed={2.5} distort={0.8}>
               <GradientTexture
                 stops={[0, 1]} // As many stops as you want
                 colors={["#458CF8", "#EB8EF4"]} // Colors need to match the number of stops
@@ -60,9 +60,19 @@ function About() {
               />
             </MeshDistortMaterial>
           </mesh>
-          <mesh position={[4, -1.8, 0]}>
+          <mesh position={[3, 1, 0]}>
             <sphereBufferGeometry args={[0.5, 64, 64]} />
-            <MeshDistortMaterial speed={3} distort={0.5}>
+            <MeshDistortMaterial speed={2} distort={0.9}>
+              <GradientTexture
+                stops={[0, 1]} // As many stops as you want
+                colors={["#458CF8", "#EB8EF4"]} // Colors need to match the number of stops
+                size={1024} // Size is optional, default = 1024
+              />
+            </MeshDistortMaterial>
+          </mesh>
+          <mesh position={[3, -2, 0]}>
+            <sphereBufferGeometry args={[0.5, 64, 64]} />
+            <MeshDistortMaterial speed={3} distort={0.9}>
               <GradientTexture
                 stops={[0, 1]} // As many stops as you want
                 colors={["#458CF8", "#EB8EF4"]} // Colors need to match the number of stops
@@ -72,10 +82,9 @@ function About() {
           </mesh>
         </Canvas>
       </div>
-      <div className="absolute top-0">
-        <div className="bg-white">
-          <Navbar />
-        </div>
+      <div className="absolute top-[100px] ">
+        <Navbar />
+
         <div className="container px-10 lg:px-20 font-main overflow-y-hidden">
           {/* TITLE */}
           <div className="para title w-full flex lg:justify-end  ">
@@ -106,19 +115,25 @@ function About() {
                 <a href={Resume} target="_blank">
                   <button
                     data-hover="Download"
-                    className="py-1 my-4 w-64 border text-center rounded-full md:text-[20px] text-[17px] hover:bg-black hover:text-white hover:text-[0px] hover:after:content-[attr(data-hover)] md:hover:after:text-[20px] hover:after:text-[17px]"
+                    className="py-1 my-4 w-64 border text-center rounded-full md:text-[17px] text-[17px] hover:bg-gradient-to-r hover:from-[#458CF8] hover:to-[#EB8EF4] hover:text-white hover:text-[0px] hover:after:content-[attr(data-hover)] md:hover:after:text-[17px] hover:after:text-[17px] shadow-lg"
                   >
                     Resume
                   </button>
                 </a>
                 <button
                   data-hover="Copy to clipboard"
-                  className="py-1 my-4 w-64 border text-center rounded-full text-[20px] md:text-[17px] hover:bg-black hover:text-white hover:text-[0px] hover:after:content-[attr(data-hover)] md:hover:after:text-[20px] hover:after:text-[17px]"
+                  className="py-1 my-4 w-64 border text-center rounded-full text-[20px] md:text-[17px] hover:bg-gradient-to-r hover:from-[#458CF8] hover:to-[#EB8EF4] hover:text-white hover:text-[0px] hover:after:content-[attr(data-hover)] md:hover:after:text-[17px] hover:after:text-[17px] shadow-lg"
                   onClick={copyContent}
                 >
-                  <a href="#" id="myText">
-                    saakshiraut28@gmail.com
-                  </a>
+                  {!isCopy ? (
+                    <a href="#" id="myText">
+                      saakshiraut28@gmail.com
+                    </a>
+                  ) : (
+                    <a href="#" id="myText">
+                      Copied !!
+                    </a>
+                  )}
                 </button>
               </p>
             </span>
@@ -133,9 +148,7 @@ function About() {
             </div>
           </div>
         </div>
-        <div className="bg-white">
-          <Footer />
-        </div>
+        <Footer />
       </div>
     </motion.div>
   );
