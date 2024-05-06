@@ -23,19 +23,6 @@ import {
 import Navbar from "./navbar";
 
 function Info() {
-  useEffect(() => {
-    const t1 = gsap.timeline();
-    t1.from(".para", {
-      y: 320,
-      ease: "power4.out",
-      delay: 1,
-      duration: 1.8,
-      stagger: {
-        amount: 0.8,
-      },
-    });
-  });
-
   return (
     <motion.div
       className="scroll-smooth snap snap-mandatory snap-y"

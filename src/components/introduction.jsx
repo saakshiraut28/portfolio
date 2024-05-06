@@ -24,18 +24,20 @@ function Intro() {
   return (
     <>
       {/* Canvas section */}
-      <div className="container h-screen w-screen bg-white fixed top-0 z-0">
-        <Canvas camera={{ fov: 55, position: [1, 1, 1] }}>
+      <div className=" fixed top-0 left-0 right-0 w-full h-full bg-white overflow-hidden z-0">
+        <Canvas
+          camera={{ fov: 55, position: [1, 1, 1] }}
+          className="w-full h-full"
+        >
           <Suspense>
             <OrbitControls enableZoom={false} autoRotate={true} />
             <ambientLight intensity={1} />
-            <mesh position={[0, 0, 0]}>
-              <sphereBufferGeometry args={[3, 32, 32]} geometry="geometry" />
+            <mesh position={[0, 0, 0]} className="w-full h-full">
+              <sphereGeometry args={[3, 32, 32]} geometry="geometry" />
               <MeshDistortMaterial distort={1}>
                 <GradientTexture
-                  stops={[0, 1]} // As many stops as you want
-                  colors={["#458CF8", "#EB8EF4"]} // Colors need to match the number of stops
-                  size={2560} // Size is optional, default = 1024
+                  stops={[0, 1]}
+                  colors={["#458CF8", "#EB8EF4"]}
                 />
               </MeshDistortMaterial>
             </mesh>
