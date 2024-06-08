@@ -7,10 +7,8 @@ import Navbar from "./components/navbar";
 import Projects from "./pages/projects";
 import About from "./pages/about";
 import { Route, Routes } from "react-router-dom";
-import Footer from "./components/footer";
 import Msg from "./pages/msg";
 import Intro from "./components/introduction";
-import Main from "./pages/main";
 
 function App() {
   return (
@@ -22,7 +20,6 @@ function App() {
           <Route path="/project" element={<Projects />} />
           <Route path="/msg" element={<Msg />} />
           <Route path="/intro" element={<Intro />} />
-          <Route path="/main" element={<Main />} />
         </Routes>
       </div>
     </>

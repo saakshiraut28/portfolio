@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import Resume from "../assets/Saakshi_Resume_wo_Number.pdf";
 import "./css/about.css";
 import Navbar from "../components/navbar";
-import Footer from "../components/footer";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import { Canvas } from "@react-three/fiber";
@@ -148,7 +147,6 @@ function About() {
             </div>
           </div>
         </div>
-        <Footer />
       </div>
     </motion.div></React.Fragment>
   );

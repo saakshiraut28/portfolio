@@ -7,9 +7,7 @@ import { AnimatePresence } from "framer-motion";
 import Intro from "../components/introduction.jsx";
 import { motion } from "framer-motion";
 import Navbar from "../components/navbar.jsx";
-import Footer from "../components/footer.jsx";
-import About from "./about.jsx";
-import Projects from "./projects.jsx";
+
 
 function Home() {
   return (
@@ -17,7 +15,6 @@ function Home() {
       <Navbar />
       <Intro />
       <Info />
-      <Footer />
     </>
   );
 }

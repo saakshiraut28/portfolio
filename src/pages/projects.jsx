@@ -1,44 +1,43 @@
 /** @format */
 
 import React, { useEffect, useState } from "react";
-import Card from "../components/cards";
-import Burger from "../assets/images/Burger-Builder.png";
-import Oide from "../assets/images/Scryptn.png";
-import Cgs from "../assets/images/CGS.png";
-import {
-  ScrollContainer,
-  ScrollPage,
-  Animator,
-  Sticky,
-  batch,
-  Fade,
-  MoveOut,
-} from "react-scroll-motion";
 import Navbar from "../components/navbar";
-import Footer from "../components/footer";
-import { motion } from "framer-motion";
 import MiniCard from "../components/minicard";
-
 
 function Projects() {
   const [ isLoaded, setIsLoaded ] = useState(false);
+  const [ cardsLoaded, setCardsLoaded ] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);
+
+    const timer = setTimeout(() => {
+      setCardsLoaded(true);
+    }, 2000); // Adjust the delay time as needed
+
+    return () => clearTimeout(timer); // Cleanup the timer on component unmount
   }, []);
 
   return (
-    <><div className={ `relative h-screen inset-0 transition-all duration-2000 ease-in-out ${isLoaded ? 'w-full h-full bg-[#A9A7FF]' : 'w-0 h-full'}` }>
+    <div className={ `relative h-screen inset-0 transition-all duration-2000 ease-in-out ${isLoaded ? 'w-full h-full bg-[#A9A7FF]' : 'w-0 h-full'}` }>
       <Navbar />
-      <div className="flex justify-center items-center">
-        <div className="gap-4 grid lg:grid-cols-3 my-20">
-          <div className="cursor-pointer"><MiniCard title='Web3 Projects' desc='Collection of all my Web3 projects 🫨' /></div>
-          <div className="cursor-pointer"><MiniCard title='Web2 Projects' desc='Collection of all my Web devel projects 🫨' /></div>
-          <div className="cursor-pointer"><MiniCard title='Other Projects' desc='Collection of all my Web3 projects 🫨' /></div>
+      { isLoaded && cardsLoaded ? (
+        <div className="flex justify-center items-center">
+          <div className="gap-4 grid lg:grid-cols-3 my-20">
+            <div className="cursor-pointer">
+              <MiniCard title="Web3 Projects" desc="Collection of all my Web3 projects 🫨" />
+            </div>
+            <div className="cursor-pointer">
+              <MiniCard title="Web2 Projects" desc="Checkout web development projects. 🕸️" />
+            </div>
+            <div className="cursor-pointer">
+              <MiniCard title="Other Projects" desc="Projects related to AI & ML, and so on... 🤖" />
+            </div>
+          </div>
         </div>
-      </div>
-      <Footer />
-    </div></>
+      ) : null }
+    </div>
   );
 }
+
 export default Projects;

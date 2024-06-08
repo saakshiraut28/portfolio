@@ -8,8 +8,7 @@ import {
 import { Canvas, useLoader, useThree } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import { TextureLoader } from "three";
-import Navbar from "./navbar";
-import Footer from "./footer";
+
 import { ScrollContainer, ScrollPage } from "react-scroll-motion";
 import {
   Animator,
@@ -23,21 +22,21 @@ import {
 function Intro() {
   return (
     <>
-      {/* Canvas section */}
-      <div className=" fixed top-0 left-0 right-0 w-full h-full bg-white overflow-hidden z-0">
+      {/* Canvas section */ }
+      <div className="top-0 right-0 left-0 z-0 fixed bg-white w-full h-full overflow-hidden">
         <Canvas
-          camera={{ fov: 55, position: [1, 1, 1] }}
+          camera={ { fov: 55, position: [ 1, 1, 1 ] } }
           className="w-full h-full"
         >
           <Suspense>
-            <OrbitControls enableZoom={false} autoRotate={true} />
-            <ambientLight intensity={1} />
-            <mesh position={[0, 0, 0]} className="w-full h-full">
-              <sphereGeometry args={[3, 32, 32]} geometry="geometry" />
-              <MeshDistortMaterial distort={1}>
+            <OrbitControls enableZoom={ false } autoRotate={ true } />
+            <ambientLight intensity={ 1 } />
+            <mesh position={ [ 0, 0, 0 ] } className="w-full h-full">
+              <sphereGeometry args={ [ 3, 32, 32 ] } geometry="geometry" />
+              <MeshDistortMaterial distort={ 1 }>
                 <GradientTexture
-                  stops={[0, 1]}
-                  colors={["#458CF8", "#EB8EF4"]}
+                  stops={ [ 0, 1 ] }
+                  colors={ [ "#458CF8", "#EB8EF4" ] }
                 />
               </MeshDistortMaterial>
             </mesh>
