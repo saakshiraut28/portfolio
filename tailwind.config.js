@@ -11,6 +11,9 @@ module.exports = {
         brush: ["Caveat Brush", "cursive"],
         main: ["Josefin Sans", "sans-serif"],
       },
+      transitionDuration: {
+        2000: "2000ms",
+      },
     },
   },
   plugins: [],
