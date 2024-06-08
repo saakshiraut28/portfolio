@@ -3,6 +3,9 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/navbar";
 import MiniCard from "../components/minicard";
+import Web3 from "../assets/images/Web3.png";
+import Web2 from "../assets/images/Web2.png";
+import Other from "../assets/images/other.png";
 
 function Projects() {
   const [ isLoaded, setIsLoaded ] = useState(false);
@@ -25,13 +28,13 @@ function Projects() {
         <div className="flex justify-center items-center">
           <div className="gap-4 grid lg:grid-cols-3 my-20">
             <div className="cursor-pointer">
-              <MiniCard title="Web3 Projects" desc="Collection of all my Web3 projects 🫨" />
+              <MiniCard img={ Web3 } title="Web3 Projects" desc="Collection of all my Web3 projects 🫨" link='/project1' />
             </div>
             <div className="cursor-pointer">
-              <MiniCard title="Web2 Projects" desc="Checkout web development projects. 🕸️" />
+              <MiniCard img={ Web2 } title="Web2 Projects" desc="Checkout web development projects. 🕸️" link='/project2' />
             </div>
             <div className="cursor-pointer">
-              <MiniCard title="Other Projects" desc="Projects related to AI & ML, and so on... 🤖" />
+              <MiniCard img={ Other } title="Other Projects" desc="Projects related to AI & ML, and so on... 🤖" link='/project3' />
             </div>
           </div>
         </div>
