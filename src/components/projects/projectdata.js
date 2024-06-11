@@ -2,28 +2,31 @@
 
 const projectsData = [
   {
-    title: "Project One",
-    githubLink: "https://github.com/username/project-one",
-    livePreview: "https://project-one.com",
-    description: "This is the description for Project One.",
-    tech: "#Html #Css #React",
+    title: "Solana Token Generator",
+    githubLink: "/#",
+    livePreview: "/#",
+    description:
+      "This was my first web3 project. I developed a react-app for creating new accounts and minting tokens on the Solana blockchain.",
+    tech: "#Solana #Web3.js",
     category: "web3",
   },
   {
-    title: "Project Two",
-    githubLink: "https://github.com/username/project-two",
-    livePreview: "https://project-two.com",
-    description: "This is the description for Project Two.",
-    tech: "#Html #Css #React",
-    category: "web3",
+    title: "Service Hub",
+    githubLink: "https://github.com/saakshiraut28/Service_Hub",
+    livePreview: "#",
+    description:
+      "This was my mini project. We created an amazing platform to bridge the gap between migrants and service providers.",
+    tech: "#ReactJS #Tailwind #MongoDB #ExpressJS #NodeJS #MERN",
+    category: "web2",
   },
   {
-    title: "Project Three",
-    githubLink: "https://github.com/username/project-three",
-    livePreview: "https://project-three.com",
-    description: "This is the description for Project Three.",
-    tech: "#Html #Css #React",
-    category: "other",
+    title: "Health Deck",
+    githubLink: "https://github.com/saakshiraut28/1_Status200_BnB2024",
+    livePreview: "#",
+    description:
+      "The idea behind this project was to build a platform with such a seamless user experience that even villagers could use it easily. It was designed to connect villagers with doctors who lived far away.",
+    tech: "#ReactJS #ExpressJS #NodeJS #MongoDB",
+    category: "web2",
   },
 ];
 
