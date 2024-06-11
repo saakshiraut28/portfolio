@@ -21,14 +21,14 @@ function Msg() {
   return (
     <motion.div
       className="text-black overflow-hidden"
-      initial={ { width: 0 } }
-      animate={ { width: "100%" } }
-      exit={ { x: window.innerWidth, transition: { duration: 3 } } }
+      initial={{ width: 0 }}
+      animate={{ width: "100%" }}
+      exit={{ x: window.innerWidth, transition: { duration: 3 } }}
     >
       <div className="w-full h-screen">
         <Navbar />
 
-        <div className="flex md:flex-row flex-col justify-center items-center w-full">
+        <div className="flex md:flex-row flex-col justify-center items-center w-full h-full">
           <div className="flex justify-start py-8 w-full md:w-3/4 para">
             <span className="relative font-black font-main text-[#e6f3ff] text-6xl md:text-[150px] leading-none">
               wanna
@@ -40,7 +40,7 @@ function Msg() {
               Feel free to reach out to me by sending a message. 🖋️
               <br />
               <span className="border-b-4 border-black hover:border-b-0 transition-all">
-                { " " }
+                {" "}
                 saakshiraut28@gmail.com
               </span>
             </span>
@@ -52,39 +52,37 @@ function Msg() {
               className="hover:border-b-4 hover:border-black transition-all"
               href="https://github.com/saakshiraut28/"
             >
-              { " " }
+              {" "}
               Github
             </a>
-            <br />{ " " }
+            <br />{" "}
             <a
               className="hover:border-b-4 hover:border-black transition-all"
               href="https://www.linkedin.com/in/rautsaakshi/"
             >
-              { " " }
+              {" "}
               Linkedin
             </a>
-            <br />{ " " }
+            <br />{" "}
             <a
               className="hover:border-b-4 hover:border-black transition-all"
               href="https://twitter.com/saakshitwt"
             >
-              { " " }
-              Twitter{ " " }
+              {" "}
+              Twitter{" "}
             </a>
             <br />
             <a
               className="hover:border-b-4 hover:border-black transition-all"
               href="https://medium.com/@saakshiraut28"
             >
-              { " " }
-              Medium{ " " }
+              {" "}
+              Medium{" "}
             </a>
           </div>
         </div>
       </div>
-      <div className="-mt-14">
-
-      </div>
+      <div className="-mt-14"></div>
     </motion.div>
   );
 }
