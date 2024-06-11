@@ -9,6 +9,9 @@ import About from "./pages/about";
 import { Route, Routes } from "react-router-dom";
 import Msg from "./pages/msg";
 import Intro from "./components/introduction";
+import Web3 from "./components/projects/web3";
+import Web2 from "./components/projects/web2";
+import Ai from "./components/projects/ml";
 
 function App() {
   return (
@@ -20,6 +23,9 @@ function App() {
           <Route path="/project" element={<Projects />} />
           <Route path="/msg" element={<Msg />} />
           <Route path="/intro" element={<Intro />} />
+          <Route path="/web3" element={<Web3 />} />
+          <Route path="/web2" element={<Web2 />} />
+          <Route path="/others" element={<Ai />} />
         </Routes>
       </div>
     </>
